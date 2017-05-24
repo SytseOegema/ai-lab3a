@@ -1,0 +1,21 @@
+#The set of variables of the CSP
+variables:
+	U,N,E,F,O,Z,c1,c10,c100 : integer;
+
+#Here the domains are defined
+domains:
+	U,N,E,F,O,Z,c1,c10,c100 <- [0..9];
+
+#Here are the constraints:
+constraints:
+O = 1;
+N <> 0;
+U <> 0;x
+N + N + F = E + c1 * 10;
+U + U + U + c1 = Z + c10 * 10;
+E + c10 = N + c100 *10;
+N + c100 = O;
+
+# Here you can specify in how many solutions
+# you are interested (all, 1, 2, 3, ...)  
+solutions: all
